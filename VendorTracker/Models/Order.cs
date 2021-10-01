@@ -36,11 +36,11 @@ namespace VendorTracker.Models
       return _instances[searchId-1];
       
     }
-    public void UpdateOrder(int num, string desc, string date)
+    public void UpdateOrder(int numItems, string desc, string date)
     {
-      NumItems = num;
+      NumItems = numItems;
       Description = desc;
-      Price = num * 2;
+      Price = numItems * 2;
       Date = date;
     }
   }

@@ -35,7 +35,7 @@ namespace VendorTracker.Controllers
     }
     
     [HttpGet("/vendors/{vendorId}/orders/{orderId}/edit")]
-    public ActionResult Edit(int vendorId, int orderId) 
+    public ActionResult Edit(int vendorId, int orderId, int number, string description, string date) 
     { 
       //find vendor by id
       Vendor associatedVendor = Vendor.Find(vendorId);
@@ -48,8 +48,27 @@ namespace VendorTracker.Controllers
         {"order", orderToEdit}
       };
 
-      //pass into view
+      //pass into view for order details
       return View(model); 
+    }
+    
+    [HttpPost("/vendors/{vendorId}/orders/{orderId}")]
+    public ActionResult Update(int vendorId, int orderId, int number, string description, string date) 
+    { 
+      //find vendor by id
+      Vendor associatedVendor = Vendor.Find(vendorId);
+      //find order by id
+      Order orderToUpdate = Order.Find(orderId);
+      //update
+      orderToUpdate.UpdateOrder(number, description, date);
+      //make and add to a Dictionary
+      Dictionary<object, object> model = new Dictionary<object, object>(2) {
+        {"vendor", associatedVendor},
+        {"order", orderToUpdate}
+      };
+
+      //pass into view
+      return View("Show", model); 
     }
   }
 }

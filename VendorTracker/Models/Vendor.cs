@@ -65,16 +65,14 @@ Extras:
 edit/update:
     done: -test/write method to update 
     done: -make a get link from show page /vendors/{id}/orders/{id}/update
--offer form (route)
--call post submit route
--controller edit route (Update)
+    done: -make controller edit route to go to form
+    done: -make edit form
+    done: -call post submit route
+-make controller update route
 
 delete - delete breaks the find function as currently implemented because it's linked to the index
 
-
-
-order items - import and integrate last week's project
-
+order items class - import and integrate last week's project
 
 Done extras:
 build Order show
