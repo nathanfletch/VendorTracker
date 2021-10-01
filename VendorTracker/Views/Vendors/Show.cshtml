@@ -14,7 +14,7 @@
 <ol>
   @foreach(Order order in Model.Orders)
   {
-    <li>@order.NumItems Croissants</li>
+    <li><a href="/vendors/@Model.Id/orders/@order.Id">@order.NumItems Croissants</a></li>
   }
 </ol>
 

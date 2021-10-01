@@ -43,9 +43,7 @@ namespace VendorTracker.Models
 /*
 Trello board simulator: 
 
-Readme
 
-build out rest of Objects within Objects restful routes
 
 
 Done: 
@@ -66,8 +64,12 @@ Order:
 goto form
 create
 
-
 // styling
+
+Readme
+
+build Order show
+
 
 Further: 
 

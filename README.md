@@ -39,6 +39,8 @@
 ## Future Plans
 * Add a BakeryItem class to add various baked goods to orders.
 * Add update and delete operations for vendors and orders.
+* Make displays filterable by date, price, etc. 
+* Make the site searchable.
 
 ## License
 
