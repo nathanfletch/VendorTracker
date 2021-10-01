@@ -35,9 +35,8 @@ namespace VendorTracker.Models
     }
     public static Order Find(int searchId)
     {
-      // return _instances[searchId-1];
-      Order goodFail = new Order(2, "test");
-      return goodFail;
+      return _instances[searchId-1];
+      
     }
 
     
