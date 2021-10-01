@@ -88,5 +88,25 @@ namespace VendorTracker.Tests
       //Assert
       Assert.AreEqual(myOrder2, result);
     }
+
+    [TestMethod]
+    public void UpdateOrder_SetsNumDescPriceDateProps_2Test24TestDate2()
+    {
+      //Arrange
+      Order myOrder = new Order(2, "test1", "test-date");
+      int expectedNum = 2;
+      string expectedDescription = "test2";
+      int expectedPrice = 4;
+      string expectedDate = "test-date2";
+
+      //Act
+      myOrder.UpdateOrder(2, "test2", "test-date2");
+
+      //Assert
+      Assert.AreEqual(expectedNum, myOrder.NumItems);
+      Assert.AreEqual(expectedDescription, myOrder.Description);
+      Assert.AreEqual(expectedPrice, myOrder.Price);
+      Assert.AreEqual(expectedDate, myOrder.Date);
+    }
   }
 }

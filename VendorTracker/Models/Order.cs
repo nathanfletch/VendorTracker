@@ -36,5 +36,12 @@ namespace VendorTracker.Models
       return _instances[searchId-1];
       
     }
+    public void UpdateOrder(int num, string desc, string date)
+    {
+      NumItems =0; //num;
+      Description =""; //desc;
+      Price =0; //num * 2;
+      Date = "";//date;
+    }
   }
 }

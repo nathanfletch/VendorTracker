@@ -47,7 +47,7 @@ namespace VendorTracker.Models
     public void Sort()
     {
       SortedOrders = Orders.OrderByDescending(order => order.Price).ToList();
-      //using the boolean allows future potential sorting methods as opposed to only by price using SortedOrders.Count == 0 as a conditional in the .cshtml file 
+      //using the boolean allows future potential sorting methods as opposed to only by price using (SortedOrders.Count == 0) as a conditional in the .cshtml file 
       IsSorted = true;
     }
     public void UnSort()
@@ -61,9 +61,15 @@ namespace VendorTracker.Models
 /*
 Trello board simulator: 
 Extras: 
-sort/filter buttons?
 
-edit/delete - delete breaks the find function as currently implemented because it's linked to the index
+edit/update:
+-test/write method to update 
+-make a get link from show page /vendors/{id}/orders/{id}/update
+-offer form (route)
+-call post submit route
+-controller edit route (Update)
+
+delete - delete breaks the find function as currently implemented because it's linked to the index
 
 
 
@@ -72,6 +78,7 @@ order items - import and integrate last week's project
 
 Done extras:
 build Order show
+sort/filter buttons
 
 
 
