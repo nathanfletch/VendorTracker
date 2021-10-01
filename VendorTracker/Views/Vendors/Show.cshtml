@@ -10,12 +10,33 @@
 {
   <p>This vendor hasn't made any orders yet.</p>
 }
-
-<ol>
-  @foreach(Order order in Model.Orders)
+else
+{
+  @if(Model.IsSorted)
   {
-    <li><a href="/vendors/@Model.Id/orders/@order.Id">@order.NumItems Croissants</a></li>
+    <ol>
+      @foreach(Order order in Model.SortedOrders)
+      {
+        <li><a href="/vendors/@Model.Id/orders/@order.Id">@order.NumItems Croissants</a></li>
+      }
+    </ol>
+    
+    <a class="btn btn-warning" href="/vendors/@Model.Id/unsorted">Return to original order</a>
   }
-</ol>
+  else
+  {
+    <ol>
+      @foreach(Order order in Model.Orders)
+      {
+        <li><a href="/vendors/@Model.Id/orders/@order.Id">@order.NumItems Croissants</a></li>
+      }
+    </ol>
+    @if(Model.Orders.Count > 1)
+    {
+      <a class="btn btn-warning" href="/vendors/@Model.Id/sorted">Sort by price</a>
+    }
+  }
+}
 
-<a href="/vendors/@Model.Id/orders/new">Add an order for @Model.Name</a>
+<br>
+<a class="my-3 btn btn-primary" href="/vendors/@Model.Id/orders/new">Add an order for @Model.Name</a>

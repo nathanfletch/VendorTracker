@@ -40,8 +40,26 @@ namespace VendorTracker.Controllers
       Order newOrder = new Order(number, description, date);
 
       vendorToAddTo.AddOrder(newOrder);
-      
+      vendorToAddTo.UnSort();
+
       return View("Show", vendorToAddTo);
+    }
+
+    [HttpGet("/vendors/{vendorId}/sorted")]
+    public ActionResult Sorted(int vendorId)
+    {
+      Vendor vendorToSort = Vendor.Find(vendorId);
+      vendorToSort.Sort();
+
+      return View("Show", vendorToSort);
+    }
+    [HttpGet("/vendors/{vendorId}/unsorted")]
+    public ActionResult UnSorted(int vendorId)
+    {
+      Vendor vendorToUnSort = Vendor.Find(vendorId);
+      vendorToUnSort.UnSort();
+
+      return View("Show", vendorToUnSort);
     }
   }
 }
