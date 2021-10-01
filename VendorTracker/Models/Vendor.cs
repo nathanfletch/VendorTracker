@@ -32,9 +32,7 @@ namespace VendorTracker.Models
     
     public void AddOrder(Order newOrder)
     {
-      Order goodFail = new Order(1,"goodFail");
-      Orders.Add(goodFail);
-      // Orders.Add(newOrder);
+      Orders.Add(newOrder);
     }
   }
 
