@@ -7,9 +7,13 @@ namespace VendorTracker.Controllers
 {
   public class OrdersController : Controller
   {
-    // [HttpGet("/")]
-    // public ActionResult Index() { 
-    //   return View(); 
-    // }
+    [HttpGet("/vendors/{id}/orders/new")]
+    public ActionResult New(int id) 
+    { 
+      //get vendor by id
+      Vendor vendorToAddTo = Vendor.Find(id);
+      //pass into view
+      return View(vendorToAddTo); 
+    }
   }
 }
