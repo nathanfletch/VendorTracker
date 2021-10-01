@@ -5,13 +5,13 @@
 
 @* Model is the vendor *@
 <h2>Enter details to add an order to @Model.Name </h2>
-<form action="/vendor/@Model.Id" method="post">
-  <input type="number" hidden id="modelId" name="modelId" value="@Model.Id">
+<form action="/vendors/@Model.Id/orders" method="post">
+  <input type="number" hidden id="vendorId" name="vendorId" value="@Model.Id">
   <label for="number">Number of items: </label>
   <input type="number" min="1" id="number" name="number">
   <label for="description">Add any notes to descripe the order: delivery, pickup, late, etc.: </label>
   <input type="text" id="description" name="description">
-  <label for="date">Date: </label>
-  <input type="date" id="date" name="date">
+  @* <label for="date">Date: </label>
+  <input type="date" id="date" name="date"> *@
   <button type="submit" class="btn btn-success">Add</button>
 </form>
