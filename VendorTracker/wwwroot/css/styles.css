@@ -1,0 +1,27 @@
+body {
+  background-color: black;
+  color: white;
+  padding-top: 40px;
+}
+
+h2 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+li {
+  list-style: none;
+}
+
+div#header {
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:100%;
+  color:white;
+  background:#0d6efd;
+  padding:8px;
+}
+#header a {
+  color: white;
+}
