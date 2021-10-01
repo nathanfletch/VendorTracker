@@ -38,10 +38,10 @@ namespace VendorTracker.Models
     }
     public void UpdateOrder(int num, string desc, string date)
     {
-      NumItems =0; //num;
-      Description =""; //desc;
-      Price =0; //num * 2;
-      Date = "";//date;
+      NumItems = num;
+      Description = desc;
+      Price = num * 2;
+      Date = date;
     }
   }
 }
