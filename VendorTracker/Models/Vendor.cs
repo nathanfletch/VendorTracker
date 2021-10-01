@@ -46,7 +46,7 @@ namespace VendorTracker.Models
 
     public void Sort()
     {
-      SortedOrders = Orders.OrderBy(order => order.Price).ToList();
+      SortedOrders = Orders.OrderByDescending(order => order.Price).ToList();
       //using the boolean allows future potential sorting methods as opposed to only by price using SortedOrders.Count == 0 as a conditional in the .cshtml file 
       IsSorted = true;
     }
