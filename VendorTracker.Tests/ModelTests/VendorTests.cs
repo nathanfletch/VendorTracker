@@ -114,23 +114,24 @@ namespace VendorTracker.Tests
       //Assert
       CollectionAssert.AreEqual(expected, result);
     }
-    // [TestMethod]
-    // public void Sort_SortsDescending_2Before1()
-    // {
-    //   //Arrange
-    //   Vendor myVendor = new Vendor("asdfjkl");
-    //   Order myOrder1 = new Order(1,"test", "test-date");
-    //   Order myOrder2 = new Order(2,"test", "test-date");
-    //   myVendor.AddOrder(myOrder1);
-    //   myVendor.AddOrder(myOrder2);
-    //   List<Order> expected = new List<Order> { myOrder2, myOrder1 };
+    [TestMethod]
+    public void UnSort_ClearsList_CountIs0()
+    {
+      //Arrange
+      Vendor myVendor = new Vendor("asdfjkl");
+      Order myOrder1 = new Order(1,"test", "test-date");
+      Order myOrder2 = new Order(2,"test", "test-date");
+      myVendor.AddOrder(myOrder1);
+      myVendor.AddOrder(myOrder2);
+      int expected = 0;
 
-    //   //Act
-    //   myVendor.Sort();
-    //   List<Order> result = myVendor.SortedOrders;
+      //Act
+      myVendor.Sort();
+      myVendor.UnSort();
+      int result = myVendor.SortedOrders.Count;
 
-    //   //Assert
-    //   CollectionAssert.AreEqual(expected, result);
-    // }
+      //Assert
+      Assert.AreEqual(expected, result);
+    }
   }
 }

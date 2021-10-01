@@ -52,7 +52,7 @@ namespace VendorTracker.Models
     }
     public void UnSort()
     {
-      SortedOrders.Clear();
+      // SortedOrders.Clear();
       IsSorted = false;
     }
   }
