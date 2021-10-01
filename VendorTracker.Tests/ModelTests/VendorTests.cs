@@ -5,8 +5,13 @@ using System;
 namespace VendorTracker.Tests
 {
   [TestClass]
-  public class VendorTests
+  public class VendorTests: IDisposable
   {
+    public void Dispose()
+    {
+      Vendor.ClearAll();
+    }
+
     [TestMethod]
     public void Constructor_HasCorrectType_Vendor()
     {
@@ -26,6 +31,17 @@ namespace VendorTracker.Tests
       //act
       Vendor myVendor = new Vendor("test");
       string result = myVendor.Name;
+      //assert
+      Assert.AreEqual(expected, result);
+    }
+    [TestMethod]
+    public void Constructor_AssignsId_1()
+    {
+      //arrange
+      int expected = 1;
+      //act
+      Vendor myVendor = new Vendor("test");
+      int result = myVendor.Id;
       //assert
       Assert.AreEqual(expected, result);
     }
