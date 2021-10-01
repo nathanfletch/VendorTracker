@@ -13,4 +13,6 @@
   <li>Date: @Model["order"].Date</li>
 </ul>
 
-<a href='/vendors/@Model["vendor"].Id'>See all orders for @Model["vendor"].Name</a>
+<a class="btn btn-warning m-3" href='/vendors/@Model["vendor"].Id/orders/@Model["order"].Id/edit'>Edit this order</a>
+
+<a class="btn btn-primary m-3" href='/vendors/@Model["vendor"].Id'>See all orders for @Model["vendor"].Name</a>

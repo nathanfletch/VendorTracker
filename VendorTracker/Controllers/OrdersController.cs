@@ -33,5 +33,23 @@ namespace VendorTracker.Controllers
       //pass into view
       return View(model); 
     }
+    
+    [HttpGet("/vendors/{vendorId}/orders/{orderId}/edit")]
+    public ActionResult Edit(int vendorId, int orderId) 
+    { 
+      //find vendor by id
+      Vendor associatedVendor = Vendor.Find(vendorId);
+      //find order by id
+      Order orderToEdit = Order.Find(orderId);
+
+      //make and add to a Dictionary
+      Dictionary<object, object> model = new Dictionary<object, object>(2) {
+        {"vendor", associatedVendor},
+        {"order", orderToEdit}
+      };
+
+      //pass into view
+      return View(model); 
+    }
   }
 }

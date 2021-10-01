@@ -3,10 +3,10 @@
   Layout = "_Layout";
 }
 
-@* Model is the vendor *@
-<h2>Enter details to add an order to @Model.Name </h2>
-<form action="/vendors/@Model.Id/orders" method="post">
-  <input type="number" hidden id="vendorId" name="vendorId" value="@Model.Id">
+@* Model is a dictionary *@
+<h2>Edit details to update this order</h2>
+<form action='/vendors/@Model["vendor"].Id/orders/@Model["order"].Id' method="post">
+  <input type="number" hidden id="vendorId" name="vendorId" value='@Model["vendor"].Id'>
   <div class="form-group">
     <label for="number">Number of items: </label>
     <input type="number" min="1" id="number" name="number">
@@ -19,5 +19,5 @@
     <label for="date">Date: </label>
     <input type="date" id="date" name="date">
   </div>
-  <button type="submit" class="btn btn-primary m-3">Add</button>
+  <button type="submit" class="btn btn-primary m-3">Update</button>
 </form>

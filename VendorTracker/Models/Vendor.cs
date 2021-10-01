@@ -63,8 +63,8 @@ Trello board simulator:
 Extras: 
 
 edit/update:
--test/write method to update 
--make a get link from show page /vendors/{id}/orders/{id}/update
+    done: -test/write method to update 
+    done: -make a get link from show page /vendors/{id}/orders/{id}/update
 -offer form (route)
 -call post submit route
 -controller edit route (Update)
