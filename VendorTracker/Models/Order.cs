@@ -16,10 +16,10 @@ namespace VendorTracker.Models
 
     public Order(int numCroissants, string description)
     {
-      NumItems = numCroissants;
-      Description = description;
-      Price = numCroissants * 2;
-      Date = "September 25th, 2021";
+      NumItems = 0; //numCroissants;
+      Description = ""; //description;
+      Price = 0;//numCroissants * 2;
+      Date = ""; //"October 1st, 2021";
       _instances.Add(this); //all categories
       Id = _instances.Count;
     }
@@ -34,9 +34,9 @@ namespace VendorTracker.Models
     //   return _instances;
     // }
 
-    // public static void ClearAll()
-    // {
-    //   _instances.Clear();
-    // }
+    public static void ClearAll()
+    {
+      _instances.Clear();
+    }
   }
 }
