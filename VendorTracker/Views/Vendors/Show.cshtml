@@ -2,3 +2,20 @@
 @{
   Layout = "_Layout";
 }
+@* Model is the vendor, show all orders *@
+
+<h2>Showing details for @Model.Name</h2>
+
+@if(Model.Orders.Count == 0)
+{
+  <p>This vendor hasn't made any orders yet.</p>
+}
+
+<ol>
+  @foreach(Order order in Model.Orders)
+  {
+    <li>@order.NumItems Croissants</li>
+  }
+</ol>
+
+<a href="/vendors/@Model.Id/new">Add an order for @Model.Name</a>
