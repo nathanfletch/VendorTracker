@@ -21,7 +21,7 @@ namespace VendorTracker.Models
       Price = numCroissants * 2;
       Date = "October 1st, 2021";
       _instances.Add(this); //all categories
-      Id = _instances.Count;
+      Id = _instances.Count +1;
     }
 
     // public static Order Find(int searchId)

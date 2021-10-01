@@ -42,5 +42,16 @@ namespace VendorTracker.Tests
       Assert.AreEqual(expectedPrice, resultPrice);
       Assert.AreEqual(expectedDate, resultDate);
     }
+    [TestMethod]
+    public void Constructor_AssignsId_1()
+    {
+      //arrange
+      int expected = 1;
+      //act
+      Order myOrder = new Order(1, "test");
+      int result = myOrder.Id;
+      //assert
+      Assert.AreEqual(expected, result);
+    }
   }
 }
