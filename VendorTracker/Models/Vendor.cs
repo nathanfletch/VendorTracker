@@ -42,10 +42,10 @@ namespace VendorTracker.Models
 Trello board simulator: 
 
 build out MVC for the required stuff: 
-Splash
+done: Splash
 
 Vendor: 
-index
+done: index
 goto form
 create
 show
