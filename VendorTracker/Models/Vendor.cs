@@ -17,7 +17,7 @@ namespace VendorTracker.Models
       Id = _instances.Count;
       Orders = new List<Order>{};
     }
-    
+
     public static void ClearAll()
     {
       _instances.Clear();
@@ -43,18 +43,7 @@ namespace VendorTracker.Models
 /*
 Trello board simulator: 
 
-build out MVC for the required stuff: 
-done: Splash
 
-Vendor: 
-done: index
-goto form
-create
-show
-
-Order:
-goto form
-create
 
 // display all info - bootstrap cards
 
@@ -68,7 +57,18 @@ Done:
 build logic files w/ tests - just utility/constructors at this point
   Order: title, the description, the price, the date
 
+build out MVC for the required stuff: 
+done: Splash
 
+Vendor: 
+done: index
+goto form
+create
+show
+
+Order:
+goto form
+create
 
 Further: 
 
