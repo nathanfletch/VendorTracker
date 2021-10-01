@@ -27,9 +27,7 @@ namespace VendorTracker.Models
     }
     public static Vendor Find(int searchId)
     {
-      Vendor goodFail = new Vendor("test");
-      return goodFail;
-      // _instances[searchId-1];
+      return _instances[searchId-1];
     }
     
   }
