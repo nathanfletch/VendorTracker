@@ -20,10 +20,14 @@ namespace VendorTracker.Models
       Description = description;
       Price = numCroissants * 2;
       Date = "October 1st, 2021";
-      _instances.Add(this); //all categories
+      _instances.Add(this); 
       Id = _instances.Count;
     }
 
+    public static void ClearAll()
+    {
+      _instances.Clear();
+    }
     // public static Order Find(int searchId)
     // {
     //   return _instances[searchId-1];
@@ -34,9 +38,5 @@ namespace VendorTracker.Models
     //   return _instances;
     // }
 
-    public static void ClearAll()
-    {
-      _instances.Clear();
-    }
   }
 }

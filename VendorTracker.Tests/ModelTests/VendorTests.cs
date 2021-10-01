@@ -1,6 +1,8 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using VendorTracker.Models;
 using System;
+using System.Collections.Generic;
+
 
 namespace VendorTracker.Tests
 {
@@ -45,6 +47,24 @@ namespace VendorTracker.Tests
       //assert
       Assert.AreEqual(expected, result);
     }
-    
+    [TestMethod]
+    public void GetAll_ReturnsAllVenders_VenderList()
+    {
+      //Arrange
+      string vendorName1 = "test1";
+      string vendorName2 = "test2";
+      Vendor myVendor1 = new Vendor(vendorName1);
+      Vendor myVendor2 = new Vendor(vendorName2);
+      List<Vendor> expected = new List<Vendor> { myVendor1, myVendor2 };
+
+      //Act
+      List<Vendor> result = Vendor.GetAll();
+
+      //Assert
+      Console.WriteLine($"expectedcount: {expected.Count}");
+      Console.WriteLine($"resultcount: {result.Count}");
+      
+      CollectionAssert.AreEqual(expected, result);
+    }
   }
 }

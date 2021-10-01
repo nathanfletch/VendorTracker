@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System;
 
 namespace VendorTracker.Models
 {
@@ -20,10 +21,12 @@ namespace VendorTracker.Models
     {
       _instances.Clear();
     }
-    // public static List<Vendor> GetAll()
-    // {
-    //   return _instances;
-    // }
+    public static List<Vendor> GetAll()
+    {
+      Vendor goodFailVendor = new Vendor("good fail");
+      
+      return _instances;
+    }
     // public static Vendor Find(int searchId)
     // {
     //   return _instances[searchId-1];
