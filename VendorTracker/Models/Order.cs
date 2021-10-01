@@ -17,7 +17,7 @@ namespace VendorTracker.Models
     public Order(int numCroissants, string description)
     {
       NumItems = numCroissants;
-      Description = ""; //description;
+      Description = description;
       Price = numCroissants * 2;
       Date =  "October 1st, 2021";
       _instances.Add(this); //all categories
