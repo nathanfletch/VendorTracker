@@ -61,9 +61,6 @@ namespace VendorTracker.Tests
       List<Vendor> result = Vendor.GetAll();
 
       //Assert
-      Console.WriteLine($"expectedcount: {expected.Count}");
-      Console.WriteLine($"resultcount: {result.Count}");
-      
       CollectionAssert.AreEqual(expected, result);
     }
   }

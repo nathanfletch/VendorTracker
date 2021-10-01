@@ -23,8 +23,6 @@ namespace VendorTracker.Models
     }
     public static List<Vendor> GetAll()
     {
-      Vendor goodFailVendor = new Vendor("good fail");
-      
       return _instances;
     }
     // public static Vendor Find(int searchId)
