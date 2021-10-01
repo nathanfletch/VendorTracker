@@ -33,10 +33,12 @@ namespace VendorTracker.Models
     {
       return _instances;
     }
-    // public static Order Find(int searchId)
-    // {
-    //   return _instances[searchId-1];
-    // }
+    public static Order Find(int searchId)
+    {
+      // return _instances[searchId-1];
+      Order goodFail = new Order(2, "test");
+      return goodFail;
+    }
 
     
 
