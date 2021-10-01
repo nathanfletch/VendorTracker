@@ -84,7 +84,7 @@ namespace VendorTracker.Tests
     public void AddOrder_AddsOrderToVendor_OrderList()
     {
       //Arrange
-      Order myOrder = new Order(3,"test");
+      Order myOrder = new Order(3,"test", "test-date");
       List<Order> expected = new List<Order> { myOrder };
       Vendor myVendor = new Vendor("asdfjkl");
       myVendor.AddOrder(myOrder);
