@@ -28,15 +28,18 @@ namespace VendorTracker.Models
     {
       _instances.Clear();
     }
+
+    public static List<Order> GetAll()
+    {
+      Order goodFailOrder = new Order(2,"test");
+      return _instances;
+    }
     // public static Order Find(int searchId)
     // {
     //   return _instances[searchId-1];
     // }
 
-    // public static List<Order> GetAll()
-    // {
-    //   return _instances;
-    // }
+    
 
   }
 }
