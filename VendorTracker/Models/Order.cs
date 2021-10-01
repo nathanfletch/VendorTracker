@@ -18,8 +18,8 @@ namespace VendorTracker.Models
     {
       NumItems = numCroissants;
       Description = description;
-      Price = 0; //numCroissants * 2;
-      Date =  "October 1st, 2021";
+      Price = numCroissants * 2;
+      Date = "October 1st, 2021";
       _instances.Add(this); //all categories
       Id = _instances.Count;
     }
