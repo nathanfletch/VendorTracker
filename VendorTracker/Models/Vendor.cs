@@ -41,16 +41,32 @@ namespace VendorTracker.Models
 /*
 Trello board simulator: 
 
-build logic files w/ tests - just utility/constructors at this point
-  Order: title, the description, the price, the date
+build out MVC for the required stuff: 
+Splash
 
-build out MVC for the required stuff: new order form
+Vendor: 
+index
+goto form
+create
+show
+
+Order:
+goto form
+create
 
 // display all info - bootstrap cards
 
 Readme
 
 build out rest of Objects within Objects restful routes
+
+
+Done: 
+
+build logic files w/ tests - just utility/constructors at this point
+  Order: title, the description, the price, the date
+
+
 
 Further: 
 
@@ -62,5 +78,6 @@ sort/filter buttons?
 order items - import and integrate last week's project
 
 
+D
 
 */
